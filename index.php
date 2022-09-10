@@ -11,13 +11,17 @@
     <?php 
         $wordReceived = $_POST['word'];
 
+        $uncensoredtext = 'La Parolaccia è ' . ' ' . $wordReceived;
+
         $badword = str_replace($wordReceived, '***', $wordReceived);
         
-        $text = 'La Parolaccia è ' . ' ' . $badword;
+        $censoredtext = 'La Parolaccia è ' . ' ' . $badword;
 
-        echo $text . '<br>';
+        $length = strlen($uncensoredtext);
 
-        echo 'La frase è lunga: ' . strlen($text);
+        echo $censoredtext . '<br>';
+
+        echo 'La frase è lunga: ' . $length;
     ?>
 
 </body>
