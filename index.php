@@ -9,7 +9,15 @@
 <body>
     
     <?php 
+        $wordReceived = $_POST['word'];
+
+        $badword = str_replace($wordReceived, '***', $wordReceived);
         
+        $text = 'La Parolaccia è ' . ' ' . $badword;
+
+        echo $text . '<br>';
+
+        echo 'La frase è lunga: ' . strlen($text);
     ?>
 
 </body>
